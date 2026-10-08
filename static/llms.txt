@@ -137,3 +137,9 @@
   model, attach workflows as tools, configure memory and sessions, connect
   channels, and gate destructive tools with human approval before publishing
   (verified against the official n8n AI documentation).
+- [How to Build Multi-Agent Workflows in n8n with Sub-Agents](https://www.161808.xyz/n8n-multi-agent-sub-agents-tutorial/)
+  Build a parent orchestrator agent with specialist sub-agents in n8n: design
+  the split, wrap each specialist in a workflow with the Execute Workflow
+  Trigger, expose them via Call n8n Workflow tools with contractual
+  descriptions, debug through executions and sessions, and harden with the
+  2.42.0 nested-tools fix (verified against official n8n docs and blog).
