@@ -1,0 +1,139 @@
+# ToolPilot — llms.txt
+
+> Hands-on tutorials for AI automation tools: n8n, MCP servers, Cursor,
+> Windsurf, Claude Desktop, Make, Zapier. Every tutorial is tested on real
+> tooling before publishing. New tutorials daily.
+
+## Key tutorials
+
+- [MCP Server Tutorial: What It Is and How It Works](https://www.161808.xyz/mcp-server-tutorial/)
+  The pillar guide to the Model Context Protocol: architecture, protocol
+  traces, building a working server.
+- [Add MCP Server to Cursor](https://www.161808.xyz/add-mcp-server-to-cursor/)
+  Step-by-step config for `~/.cursor/mcp.json`, verification, troubleshooting.
+- [Windsurf MCP Setup](https://www.161808.xyz/windsurf-mcp-setup/)
+  Current config path `~/.config/devin/mcp_config.json`, SSE/stdio transports.
+- [Connect MCP Server to Claude Desktop](https://www.161808.xyz/connect-mcp-server-to-claude-desktop/)
+  `claude_desktop_config.json` setup, tools debugging.
+- [Migrate from Zapier to n8n](https://www.161808.xyz/zapier-to-n8n-migration/)
+  Cost comparison, workflow rebuild strategy (2026 pricing).
+- [n8n Error Handling](https://www.161808.xyz/n8n-error-handling/)
+  Error Trigger workflows, onError settings, retry strategies.
+- [n8n AI Agent Tutorial](https://www.161808.xyz/n8n-ai-agent-tutorial/)
+  Build an AI agent with the AI Agent node: chat model, tools, memory
+  (tested on n8n 2.40.7).
+- [Claude Code MCP Setup](https://www.161808.xyz/claude-code-mcp-setup/)
+  Connect MCP servers to Claude Code: scopes, CLI commands, env secrets
+  (tested on Claude Code 2.1.283).
+- [n8n Vector Store Tutorial: Store and Retrieve Embeddings with Pinecone and Qdrant](https://www.161808.xyz/n8n-vector-store-tutorial/)
+  Pinecone/Qdrant integration in n8n, RAG-ready vector storage walkthrough.
+- [n8n vs Make for AI Agents: Which One Should You Build On?](https://www.161808.xyz/n8n-vs-make-ai-agents/)
+  Architecture, model freedom, and per-execution vs per-operation pricing math
+  for agent workloads (n8n 2.40.7 verified).
+- [How to Install n8n on Ubuntu VPS (2026): Docker Compose, Postgres & Free HTTPS](https://www.161808.xyz/install-n8n-ubuntu-vps/)
+  Production install with Docker Compose, Postgres 18, and Caddy HTTPS
+  (tested on n8n 2.40.7).
+- [n8n Docker Compose Setup: Self-Hosting with Postgres and Queue Mode (2026)](https://www.161808.xyz/n8n-docker-compose-setup/)
+  Compose file anatomy, Redis queue mode with workers, safe upgrades, backups.
+- [How to Build an MCP Server in Python (2026): Tools, Resources, and Claude Desktop Setup](https://www.161808.xyz/build-mcp-server-python/)
+  Official Python SDK v2: typed tools, resources, Inspector testing, and
+  Claude Desktop stdio setup.
+- [n8n Code Node JavaScript Tutorial: Run Modes, $input, Data Transforms & Debugging](https://www.161808.xyz/n8n-code-node-javascript/)
+  Run Once for All Items vs Each Item, the { json } return contract, native
+  Luxon dates, console.log debugging, real error fixes (verified on n8n 2.x).
+- [n8n Vector Store Tutorial](https://www.161808.xyz/n8n-vector-store-tutorial/)
+  Store and retrieve embeddings in n8n: Pinecone and Qdrant Vector Store
+  nodes, chunking, AI agent retrieval-as-tool (tested on n8n 2.40.7).
+- [n8n vs Make for AI Agents](https://www.161808.xyz/n8n-vs-make-ai-agents/)
+  Head-to-head comparison for AI agents: architecture, model choice,
+  memory, and real pricing math per execution vs per operation.
+- [How to Install n8n on Ubuntu VPS](https://www.161808.xyz/install-n8n-ubuntu-vps/)
+  Production n8n on a VPS: Docker Compose, Postgres 18, free HTTPS via
+  Caddy, backups and upgrades (verified on n8n 2.40.7).
+- [n8n Docker Compose Setup](https://www.161808.xyz/n8n-docker-compose-setup/)
+  Production-ready compose file: Postgres, named volumes, .env secrets,
+  Redis queue-mode workers, safe upgrades, five real fixes (n8n 2.40.7).
+- [How to Update n8n Self-Hosted: Safe Upgrades for Docker Compose, Docker, and npm](https://www.161808.xyz/how-to-update-n8n-self-hosted/)
+  Update runbook for all three install methods: backups, release-note
+  checks, database migrations, rollback with n8n db:revert, five real
+  fixes (npm path verified on n8n 2.40.7 to 2.41.4).
+- [n8n Chatbot with Memory Tutorial: Build a Bot That Remembers Conversations](https://www.161808.xyz/n8n-chatbot-memory-tutorial/)
+  Chat Trigger plus AI Agent with the Simple Memory sub-node: per-user
+  sessions, context window tuning, Postgres Chat Memory for production
+  (verified on n8n 2.41.4 node definitions).
+- [How to Build an AI Support Chatbot in n8n: RAG Knowledge Base, Memory, and Human Escalation](https://www.161808.xyz/build-ai-support-chatbot-n8n/)
+  Chat Trigger plus AI Agent with Simple Memory and a Vector Store Retriever
+  over support docs, with an ESCALATE_TO_HUMAN IF-branch handoff to the
+  helpdesk (verified on n8n 2.41.4 node definitions).
+- [n8n Postgres Tutorial: Connect, Query, and Automate (2026)](https://www.161808.xyz/n8n-postgres-tutorial/)
+  Postgres credentials, Execute Query vs Select/Insert/Update operations,
+  parameterized queries, five real connection fixes (verified on n8n 2.40.7).
+
+## Site
+
+- Homepage: https://www.161808.xyz/
+- About: https://www.161808.xyz/about/
+- Full sitemap: https://www.161808.xyz/sitemap.xml
+- [n8n LangChain RAG Tutorial: Build a Chatbot That Answers from Your Documents (2026)](https://www.161808.xyz/n8n-langchain-rag-tutorial/)
+  LangChain Documents Loader and Vector Store retriever with an AI Agent:
+  chunking, embeddings, retrieval tuning, grounding answers in your own
+  documents (verified against the 2026 LangChain.js node set in n8n 2.41.x).
+- [MCP Postgres Server Tutorial: Safe Read-Only Database Access for AI Agents (2026)](https://www.161808.xyz/mcp-postgres-server-tutorial/)
+  Postgres MCP Pro in restricted mode behind a least-privilege read-only
+  role: deprecated official server warning, real blocked-write tests,
+  Claude Desktop config (tested against a live PostgreSQL database).
+- [n8n Queue Mode Scaling Tutorial: Run Worker Processes with Redis (2026)](https://www.161808.xyz/n8n-queue-mode-scaling/)
+  Queue-mode cluster with Docker Compose: main instance, Redis job queue,
+  and scalable `n8n worker` processes on Postgres, health checks included
+  (verified on n8n 2.41.4).
+- [n8n Agents Tutorial: Build a Telegram AI Agent from Scratch (2026)](https://www.161808.xyz/n8n-agents-tutorial/)
+  n8n Agents (Sept 2026 launch): OpenRouter model, Todoist/Gmail tools,
+  skills, Telegram channel, schedules, and the Message an Agent node,
+  plus self-hosted setup via N8N_ENABLED_MODULES (verified on n8n 2.41.4).
+- [MCP Stateless Spec Migration Guide: Move Your Server to 2026-07-28 Without Downtime](https://www.161808.xyz/mcp-stateless-spec-migration/)
+  Migration to the MCP 2026-07-28 stateless wire: drop Mcp-Session-Id, implement
+  server/discover, per-request _meta, dual-era transition, plus Tasks, caching,
+  and MCP Apps upgrades (based on the official spec changelog and SDK examples).
+- [How to Use Ollama with n8n AI Agent: Run Local LLMs That Actually Call Tools](https://www.161808.xyz/n8n-ai-agent-ollama-tutorial/)
+  Ollama Chat Model wired to the AI Agent node: tool-capable model selection,
+  Docker networking for Base URL, fixing silent skipped tool calls with the
+  n8n 2.40 Force Tool Call on First Iteration option, and Enable Fallback Model
+- [Make.com MCP Server Tutorial: Turn Your Scenarios into AI Tools](https://www.161808.xyz/make-com-mcp-server-tutorial/)
+  Expose Make scenarios as MCP tools: MCP token with mcp:use scope, OAuth at
+  mcp.make.com, scenario-level access control, inputs/outputs as tool contract,
+  and the executionId timeout pattern (verified against Make developer docs).
+  (verified against n8n 2.41.3 node definitions).
+- [How to Create n8n Agent Skills: Write SKILL.md Files That Teach Coding Agents to Build Better Workflows](https://www.161808.xyz/n8n-agent-skills-tutorial/)
+  Author n8n agent skills from the official mid-Sept 2026 authoring guide:
+  64-char names, 1024-char descriptions, .agents/skills/ team layout, a Python
+  validator, and harness install for Claude Code, Cursor, and OpenCode.
+- [How to Fix n8n CVE-2026-44791: Patch the XML Node Prototype Pollution Bypass](https://www.161808.xyz/n8n-cve-2026-44791-patch-tutorial/)
+  Patch the May 2026 XML node prototype pollution bypass (CVSS 9.4): upgrade to
+  1.123.43 / 2.20.7 / 2.22.1, NODES_EXCLUDE emergency workaround, permission
+  lockdown, and a __proto__ regression check (Docker and npm paths).
+- [Meta WhatsApp Business MCP Server Setup: Let an AI Agent Onboard Your Business Number](https://www.161808.xyz/meta-whatsapp-mcp-server-setup/)
+  Connect Meta's Sept 2026 WhatsApp Business Tools MCP server to Claude, Codex,
+  or ChatGPT via OAuth: Streamable HTTP endpoint, scoped consent, phone number
+  onboarding and verification by chat, templates, webhooks, and system user
+  tokens (verified against Meta's official MCP documentation).
+- [How to Migrate n8n from npm to Docker Before n8n 3.0](https://www.161808.xyz/n8n-npm-to-docker-migration/)
+  Move a working npm install to Docker Compose before n8n 3.0 drops npm
+  support: back up ~/.n8n with the encryption key, install Docker, copy data
+  into a volume at /home/node/.n8n with node-user ownership, and boot a
+  pinned 2.x image so the database migrates cleanly.
+- [n8n 3.0 Upgrade Guide: The Breaking Changes Checklist Before You Update](https://www.161808.xyz/n8n-3-0-upgrade-guide/)
+  Pre-upgrade checklist for the October 2026 n8n 3.0 release: Docker-only
+  deployment, 35+ removed nodes (Function to Code, Item Lists replacements),
+  AI Agent v1 removal, renamed storage directory, re-defaulted security
+  settings, Chat Hub opt-in, and a staged upgrade path with verification
+  (based on the official n8n 3.0 breaking changes document).
+- [How to Use n8n Workflows as MCP Tools in Claude Code](https://www.161808.xyz/n8n-workflows-as-mcp-tools-claude-code/)
+  Turn n8n workflows into tools Claude Code can call: enable the instance-level
+  MCP server, connect via OAuth or API key, expose workflows with Available in
+  MCP, then search, inspect, trigger, and test them from the terminal
+  (verified against the official n8n MCP server documentation).
+- [How to Build AI Agents with the n8n Agent Builder: From Zero to a Working Agent](https://www.161808.xyz/n8n-agent-builder-tutorial/)
+  Build a complete AI agent in the n8n Agent Builder: write instructions, pick a
+  model, attach workflows as tools, configure memory and sessions, connect
+  channels, and gate destructive tools with human approval before publishing
+  (verified against the official n8n AI documentation).

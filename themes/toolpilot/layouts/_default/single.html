@@ -1,0 +1,65 @@
+{{ define "main" }}
+<div class="wrap">
+<article class="article">
+  <div class="breadcrumb"><a href="/">Home</a> / {{ with .Params.categories }}<a href="/categories/{{ index . 0 | urlize }}/">{{ index . 0 }}</a> / {{ end }}{{ .Title }}</div>
+  <h1>{{ .Title }}</h1>
+  <div class="article-meta">
+    <span>📅 {{ .Date.Format "January 2, 2006" }}</span>
+    <span>⏱️ {{ .ReadingTime }} min read</span>
+    {{ with index .Site.Data.analytics.pages .RelPermalink }}<span>👁 {{ . }} views</span>{{ end }}
+    <span>✍️ {{ .Site.Params.author }}</span>
+  </div>
+  {{ if .Params.toc }}
+  <aside class="toc">
+    <strong>On this page</strong>
+    {{ .TableOfContents }}
+  </aside>
+  {{ end }}
+  {{ .Content }}
+  {{ if .Params.faq }}
+  <h2>Frequently asked questions</h2>
+  {{ range .Params.faq }}
+  <div class="faq-item">
+    <h3>{{ .q }}</h3>
+    <p>{{ .a }}</p>
+  </div>
+  {{ end }}
+  {{ end }}
+  {{ with .Params.tags }}
+  <div class="tags">{{ range . }}<a class="tag" href="/tags/{{ . | urlize }}/">{{ . }}</a>{{ end }}</div>
+  {{ end }}
+  <div class="author-box">
+    <div class="author-avatar">TP</div>
+    <div>
+      <strong>{{ .Site.Params.author }}</strong>
+      <p>{{ .Site.Params.authorBio }}</p>
+    </div>
+  </div>
+  <div class="pager">
+    {{ with .PrevInSection }}<a class="prev" href="{{ .RelPermalink }}">← {{ .Title }}</a>{{ end }}
+    {{ with .NextInSection }}<a class="next" href="{{ .RelPermalink }}">{{ .Title }} →</a>{{ end }}
+  </div>
+</article>
+
+{{ $all := where (where .Site.RegularPages "Section" "tutorials") ".RelPermalink" "!=" .RelPermalink }}
+{{ $cat := index (.Params.categories | default (slice "")) 0 }}
+{{ $byCat := where $all ".Params.categories" "intersect" (slice $cat) }}
+{{ $related := cond (and (ne $cat "") (gt (len $byCat) 0)) (first 3 $byCat) (first 3 $all) }}
+
+{{ if $related }}
+<div class="wrap" style="padding-left:0;padding-right:0">
+  <h2 class="section-title">Keep reading</h2>
+  <div class="cards">
+    {{ range $related }}
+    <article class="card">
+      <div class="kicker">{{ with .Params.categories }}{{ index . 0 }}{{ end }}</div>
+      <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+      <p>{{ .Params.description | default (.Summary | plainify | truncate 140) }}</p>
+      <div class="meta">{{ .Date.Format "Jan 2, 2006" }} · {{ .ReadingTime }} min read</div>
+    </article>
+    {{ end }}
+  </div>
+</div>
+{{ end }}
+</div>
+{{ end }}

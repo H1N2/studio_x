@@ -1,0 +1,49 @@
+{{ define "main" }}
+<section class="hero">
+  <div class="hero-inner">
+    <h1>Hands-on tutorials for AI automation tools</h1>
+    <p>We install it, break it, and document every step — n8n workflows, MCP servers, Make scenarios, and AI agents. No fluff, no rewritten docs.</p>
+    <a class="btn" href="/tutorials/">Browse tutorials</a>
+    <a class="btn-ghost" href="/about/">Why trust us</a>
+  </div>
+</section>
+
+<div class="wrap">
+  <h2 class="section-title">Latest tutorials</h2>
+  <div class="cards">
+    {{ range first 6 (where .Site.RegularPages "Section" "tutorials") }}
+    <article class="card">
+      <div class="kicker">{{ with .Params.categories }}{{ index . 0 }}{{ end }}</div>
+      <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+      <p>{{ .Params.description | default (.Summary | plainify | truncate 140) }}</p>
+      <div class="meta">{{ .Date.Format "Jan 2, 2006" }} · {{ .ReadingTime }} min read</div>
+    </article>
+    {{ end }}
+  </div>
+
+  {{ with .Site.Data.analytics.weekly }}
+  {{ if gt (len .) 0 }}
+  <h2 class="section-title" style="margin-top:48px">Popular this week</h2>
+  <div class="cards">
+    {{ range first 3 . }}
+    <article class="card">
+      <div class="kicker">🔥 {{ .views }} views</div>
+      <h3><a href="{{ .path }}">{{ .title }}</a></h3>
+    </article>
+    {{ end }}
+  </div>
+  {{ end }}
+  {{ end }}
+
+  <h2 class="section-title" style="margin-top:48px">Browse by topic</h2>  <div class="cat-grid">
+    {{- $catMeta := dict "n8n" (dict "emoji" "⚙️" "title" "n8n" "desc" "Self-hosted workflow automation, from install to AI agents.") "mcp" (dict "emoji" "🔌" "title" "MCP" "desc" "Model Context Protocol servers: build, connect, and extend.") "make" (dict "emoji" "🛠️" "title" "Make" "desc" "Scenarios, webhooks, and app integrations that actually work.") "comparisons" (dict "emoji" "⚖️" "title" "Comparisons" "desc" "Honest tool-vs-tool breakdowns and pricing comparisons.") }}
+    {{- range $name, $taxonomy := .Site.Taxonomies.categories }}
+    {{- $key := lower $name }}
+    {{- $meta := index $catMeta $key }}
+    {{- if and $meta (gt (len $taxonomy.Pages) 0) }}
+    <a class="cat-card" href="{{ $taxonomy.Page.Permalink }}"><h3>{{ $meta.emoji }} {{ $meta.title }}</h3><p>{{ $meta.desc }}</p></a>
+    {{- end }}
+    {{- end }}
+  </div>
+</div>
+{{ end }}

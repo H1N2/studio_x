@@ -1,0 +1,1 @@
+{{ if .IsHome }}{{ .Site.Title }} — Hands-on tutorials for AI automation tools{{ else }}{{ if eq .Kind "term" }}{{ title (.Data.Singular | default "") }}: {{ end }}{{ if eq .Kind "taxonomy" }}All {{ end }}{{ .Title }} | {{ .Site.Title }}{{ end }}{{ if and .IsNode .Paginator (gt .Paginator.PageNumber 1) }} – Page {{ .Paginator.PageNumber }}{{ end }}

@@ -1,0 +1,121 @@
+{
+ "generated_at": "2026-10-05T09:40:08+08:00",
+ "checks": {
+  "sitemap": {
+   "ok": null,
+   "detail": "HTTP None"
+  },
+  "robots_ai_bots": {
+   "ok": null,
+   "detail": "HTTP None"
+  },
+  "homepage_onpage": {
+   "ok": null,
+   "detail": "HTTP None"
+  },
+  "google_verify": {
+   "ok": null,
+   "detail": "HTTP None"
+  },
+  "bing_verify": {
+   "ok": null,
+   "detail": "HTTP None"
+  },
+  "llms_txt": {
+   "ok": null,
+   "detail": "HTTP None"
+  }
+ },
+ "crawlers": {
+  "ClaudeBot": 72,
+  "bingbot": 37,
+  "Googlebot": 31,
+  "OAI-SearchBot": 5
+ },
+ "content_gaps": [
+  {
+   "path": "/archives/yangming-vs-zhuxi",
+   "count": 41
+  },
+  {
+   "path": "/favicon.ico",
+   "count": 7
+  },
+  {
+   "path": "/.git/HEAD",
+   "count": 5
+  },
+  {
+   "path": "/data:image/svg+xml,%3Csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20viewBox=%270%200%20100%20100%27%3E%3Crect%20width=%27100%27%20height=%27100%27%20rx=%2720%27%20fill=%27%234338ca%27/%3E%3Ctext%20x=%2750%27%20y=%2768%27%20font-size=%2752%27%20text-anchor=%27middle%27%20fill=%27white%27%20font-family=%27sans-serif%27%20font-weight=%27bold%27%3ET%3C/text%3E%3C/svg%3E",
+   "count": 3
+  },
+  {
+   "path": "/categories/make/",
+   "count": 3
+  },
+  {
+   "path": "/categories/comparisons/",
+   "count": 3
+  },
+  {
+   "path": "/.env.backup",
+   "count": 3
+  },
+  {
+   "path": "/.env.save",
+   "count": 3
+  },
+  {
+   "path": "/.env.prod",
+   "count": 3
+  },
+  {
+   "path": "/.env.staging",
+   "count": 3
+  }
+ ],
+ "orphans": [
+  "build-mcp-server-python",
+  "make-com-mcp-server-tutorial",
+  "mcp-postgres-server-tutorial",
+  "n8n-ai-agent-ollama-tutorial",
+  "n8n-postgres-tutorial"
+ ],
+ "backlog_top5": [
+  {
+   "keyword": "n8n message an agent node tutorial",
+   "slug": "n8n-message-an-agent-node",
+   "score": 4.15,
+   "monthly_searches": 480
+  },
+  {
+   "keyword": "mcp tasks async operations tutorial",
+   "slug": "mcp-tasks-async-tutorial",
+   "score": 4.15,
+   "monthly_searches": 390
+  },
+  {
+   "keyword": "mcp apps interactive ui tutorial",
+   "slug": "mcp-apps-interactive-ui-tutorial",
+   "score": 4.15,
+   "monthly_searches": 390
+  },
+  {
+   "keyword": "make.com mcp server tutorial",
+   "slug": "make-com-mcp-server-tutorial",
+   "score": 4.15,
+   "monthly_searches": 590
+  },
+  {
+   "keyword": "how to publish mcp server to mcp registry",
+   "slug": "publish-mcp-server-to-registry",
+   "score": 4.15,
+   "monthly_searches": 480
+  }
+ ],
+ "health_score": null,
+ "backlog": {
+  "published": 24,
+  "planned": 65
+ }
+}

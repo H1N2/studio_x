@@ -1,0 +1,39 @@
+baseURL = "https://www.161808.xyz/"
+title = "ToolPilot"
+locale = "en-us"
+theme = "toolpilot"
+paginate = 12
+enableRobotsTXT = false
+enableGitInfo = false
+
+[params]
+  description = "Hands-on tutorials for AI automation tools: n8n, Make, Zapier, MCP servers, and AI agents. Every guide is tested step by step — no fluff."
+  author = "ToolPilot Team"
+  authorBio = "We install, break, and fix automation tools so you don't have to. Every tutorial on ToolPilot is tested hands-on before publishing."
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+
+[permalinks]
+  tutorials = "/:slug/"
+
+[markup]
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 3
+    ordered = false
+  [markup.goldmark.renderer]
+    unsafe = true
+  [markup.highlight]
+    style = "github-dark"
+    lineNos = false
+    codeFences = true
+
+[outputs]
+  home = ["HTML", "RSS"]
+
+[sitemap]
+  changefreq = "weekly"
+  filename = "sitemap.xml"
+  priority = 0.5

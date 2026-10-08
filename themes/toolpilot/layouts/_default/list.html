@@ -1,0 +1,25 @@
+{{ define "main" }}
+<div class="wrap">
+  <div class="list-head">
+    <h1>{{ .Title }}</h1>
+    {{ with .Content }}<div>{{ . }}</div>{{ end }}
+  </div>
+  <div class="cards">
+    {{ range .Paginator.Pages }}
+    <article class="card">
+      <div class="kicker">{{ with .Params.categories }}{{ index . 0 }}{{ end }}</div>
+      <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+      <p>{{ .Params.description | default (.Summary | plainify | truncate 140) }}</p>
+      <div class="meta">{{ .Date.Format "Jan 2, 2006" }} · {{ .ReadingTime }} min read</div>
+    </article>
+    {{ end }}
+  </div>
+  {{ if gt .Paginator.TotalPages 1 }}
+  <nav class="pagination">
+    {{ if .Paginator.HasPrev }}<a href="{{ .Paginator.Prev.URL }}">← Newer</a>{{ end }}
+    <span class="current">Page {{ .Paginator.PageNumber }} of {{ .Paginator.TotalPages }}</span>
+    {{ if .Paginator.HasNext }}<a href="{{ .Paginator.Next.URL }}">Older →</a>{{ end }}
+  </nav>
+  {{ end }}
+</div>
+{{ end }}

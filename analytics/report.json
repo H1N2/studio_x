@@ -1,0 +1,119 @@
+{
+ "generated_at": "2026-10-08T17:54:16+08:00",
+ "new_lines": 0,
+ "total_views": 381,
+ "humans": 381,
+ "bots": 260,
+ "top_pages": [
+  {
+   "path": "/",
+   "title": "Home",
+   "views": 129
+  },
+  {
+   "path": "/about/",
+   "title": "/about/",
+   "views": 11
+  },
+  {
+   "path": "/n8n-ai-agent-tutorial/",
+   "title": "n8n AI Agent Tutorial: Build Your First AI Agent with Tools and Memory",
+   "views": 8
+  },
+  {
+   "path": "/categories/n8n/",
+   "title": "/categories/n8n/",
+   "views": 7
+  },
+  {
+   "path": "/categories/mcp/",
+   "title": "/categories/mcp/",
+   "views": 7
+  }
+ ],
+ "top_referrers": [
+  {
+   "domain": "bing.com",
+   "views": 1
+  }
+ ],
+ "daily": {
+  "2026-10-01": {
+   "views": 18,
+   "humans": 16,
+   "unique_ips": 17
+  },
+  "2026-10-02": {
+   "views": 95,
+   "humans": 95,
+   "unique_ips": 10
+  },
+  "2026-10-03": {
+   "views": 82,
+   "humans": 29,
+   "unique_ips": 74
+  },
+  "2026-10-04": {
+   "views": 80,
+   "humans": 14,
+   "unique_ips": 78
+  },
+  "2026-10-05": {
+   "views": 39,
+   "humans": 39,
+   "unique_ips": 10
+  },
+  "2026-10-06": {
+   "views": 42,
+   "humans": 18,
+   "unique_ips": 39
+  },
+  "2026-10-07": {
+   "views": 35,
+   "humans": 19,
+   "unique_ips": 34
+  }
+ },
+ "top_404": [
+  {
+   "path": "/archives/yangming-vs-zhuxi",
+   "count": 41
+  },
+  {
+   "path": "/favicon.ico",
+   "count": 7
+  },
+  {
+   "path": "/.git/HEAD",
+   "count": 6
+  },
+  {
+   "path": "/.git/config",
+   "count": 5
+  },
+  {
+   "path": "/rest/api/1.0/application-properties",
+   "count": 4
+  },
+  {
+   "path": "/data:image/svg+xml,%3Csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20viewBox=%270%200%20100%20100%27%3E%3Crect%20width=%27100%27%20height=%27100%27%20rx=%2720%27%20fill=%27%234338ca%27/%3E%3Ctext%20x=%2750%27%20y=%2768%27%20font-size=%2752%27%20text-anchor=%27middle%27%20fill=%27white%27%20font-family=%27sans-serif%27%20font-weight=%27bold%27%3ET%3C/text%3E%3C/svg%3E",
+   "count": 3
+  },
+  {
+   "path": "/categories/make/",
+   "count": 3
+  },
+  {
+   "path": "/categories/comparisons/",
+   "count": 3
+  },
+  {
+   "path": "/.env",
+   "count": 3
+  },
+  {
+   "path": "/.env.backup",
+   "count": 3
+  }
+ ]
+}

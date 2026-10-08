@@ -1,0 +1,10 @@
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="/">Tool<span>Pilot</span></a>
+    <nav class="nav">
+      <a href="/tutorials/">Tutorials</a>
+      {{- with .Site.Taxonomies.categories.comparisons }}{{ if gt (len .Pages) 0 }}<a href="{{ .Page.Permalink }}">Comparisons</a>{{ end }}{{ end }}
+      <a href="/about/">About</a>
+    </nav>
+  </div>
+</header>

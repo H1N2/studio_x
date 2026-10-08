@@ -1,0 +1,2 @@
+{{- $img := .Page.Resources.GetMatch (.Destination | strings.TrimPrefix "/") -}}
+<img src="{{ .Destination | safeURL }}" alt="{{ .Text }}" loading="lazy" decoding="async"{{ with $img }} width="{{ .Width }}" height="{{ .Height }}"{{ end }}{{ with .Title }} title="{{ . }}"{{ end }}>

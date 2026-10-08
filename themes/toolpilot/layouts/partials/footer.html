@@ -1,0 +1,34 @@
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>
+      <h4>ToolPilot</h4>
+      <p>Hands-on tutorials for AI automation tools — n8n, Make, Zapier, MCP servers, and AI agents. Every guide is tested step by step before publishing.</p>
+    </div>
+    <div>
+      <h4>Learn</h4>
+      <ul>
+        <li><a href="/tutorials/">All tutorials</a></li>
+        {{- $catNames := dict "n8n" "n8n guides" "mcp" "MCP guides" "make" "Make guides" "comparisons" "Comparisons" }}
+        {{- range $name, $taxonomy := .Site.Taxonomies.categories }}
+        {{- $label := index $catNames (lower $name) }}
+        {{- if and $label (gt (len $taxonomy.Pages) 0) }}
+        <li><a href="{{ $taxonomy.Page.Permalink }}">{{ $label }}</a></li>
+        {{- end }}
+        {{- end }}
+      </ul>
+    </div>
+    <div>
+      <h4>Site</h4>
+      <ul>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/contact/">Contact</a></li>
+        <li><a href="/privacy/">Privacy Policy</a></li>
+        <li><a href="/index.xml">RSS feed</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© {{ now.Format "2006" }} ToolPilot. All rights reserved.</span>
+    <span>Tutorials tested hands-on. Some links may be affiliate links.</span>
+  </div>
+</footer>
